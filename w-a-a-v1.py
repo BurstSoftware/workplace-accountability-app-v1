@@ -16,48 +16,49 @@ st.set_page_config(
 )
 
 # ---------------------------------------------------------
-# STYLES
+# STYLES - Updated for dark theme
 # ---------------------------------------------------------
 
 st.markdown(
     """
     <style>
+        /* Dark background support */
+        .stApp {
+            background-color: #0e1117;
+        }
+        
+        /* Main title - White */
         .main-title {
             font-size: 2.5rem;
             font-weight: 700;
-            color: #1f2937;
+            color: #ffffff !important;
             margin-bottom: 0.5rem;
         }
 
+        /* Section titles - White */
         .section-title {
             font-size: 1.8rem;
             font-weight: 600;
-            color: #111827;
+            color: #ffffff !important;
             margin-top: 1rem;
         }
 
-        .concept-box {
-            background-color: #f3f4f6;
-            padding: 1rem;
-            border-radius: 12px;
-            border-left: 6px solid #2563eb;
-            margin-bottom: 1rem;
-        }
-
-        .warning-box {
-            background-color: #fef2f2;
-            padding: 1rem;
-            border-radius: 12px;
-            border-left: 6px solid #dc2626;
-            margin-bottom: 1rem;
-        }
-
+        /* Light boxes - Dark text for contrast */
+        .concept-box,
+        .warning-box,
         .info-box {
-            background-color: #ecfeff;
-            padding: 1rem;
-            border-radius: 12px;
-            border-left: 6px solid #0891b2;
-            margin-bottom: 1rem;
+            color: #111827 !important;
+            font-weight: 400;
+        }
+
+        /* Sidebar styling */
+        .css-1d391kg, .css-1544g2n {
+            background-color: #1a1f2e;
+        }
+        
+        /* General text improvements */
+        .stMarkdown, .stWrite, p, li {
+            color: #e6e6e6;
         }
     </style>
     """,
