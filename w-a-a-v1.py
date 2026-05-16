@@ -16,13 +16,13 @@ st.set_page_config(
 )
 
 # ---------------------------------------------------------
-# STYLES - Updated for dark theme
+# STYLES - Fully Dark Theme
 # ---------------------------------------------------------
 
 st.markdown(
     """
     <style>
-        /* Dark background support */
+        /* Dark background for the entire app */
         .stApp {
             background-color: #0e1117;
         }
@@ -35,7 +35,7 @@ st.markdown(
             margin-bottom: 0.5rem;
         }
 
-        /* Section titles - White */
+        /* Section titles (subheaders) - White */
         .section-title {
             font-size: 1.8rem;
             font-weight: 600;
@@ -43,22 +43,41 @@ st.markdown(
             margin-top: 1rem;
         }
 
-        /* Light boxes - Dark text for contrast */
+        /* Definition boxes - Dark background with White text */
         .concept-box,
         .warning-box,
         .info-box {
-            color: #111827 !important;
-            font-weight: 400;
+            background-color: #1f2937 !important;
+            color: #ffffff !important;
+            padding: 1rem;
+            border-radius: 12px;
+            margin-bottom: 1rem;
+            border-left-width: 6px;
         }
 
-        /* Sidebar styling */
-        .css-1d391kg, .css-1544g2n {
+        .concept-box {
+            border-left-color: #2563eb !important;
+        }
+        .warning-box {
+            border-left-color: #dc2626 !important;
+        }
+        .info-box {
+            border-left-color: #0891b2 !important;
+        }
+
+        /* Sidebar improvements */
+        [data-testid="stSidebar"] {
             background-color: #1a1f2e;
         }
         
-        /* General text improvements */
-        .stMarkdown, .stWrite, p, li {
-            color: #e6e6e6;
+        /* General text color */
+        .stMarkdown, .stWrite, p, li, label, .stTextArea textarea {
+            color: #e6e6e6 !important;
+        }
+
+        /* Captions and smaller text */
+        .stCaption {
+            color: #9ca3af !important;
         }
     </style>
     """,
